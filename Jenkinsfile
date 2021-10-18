@@ -8,6 +8,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 checkout scm
+                sh 'chmod +x gradlew'
                 sh './gradlew build'
             }
         }
