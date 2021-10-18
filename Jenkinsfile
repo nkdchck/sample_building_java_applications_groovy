@@ -7,6 +7,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                checkout scm
+                sh './gradlew build'
             }
         }
         stage('Shared Library Test') {
